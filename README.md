@@ -1,6 +1,6 @@
 ## README
 
-The repo provides a simple example for [ztracy](https://github.com/7R35C0/ztracy) package.
+The repo provides a simple example for [ztracy](https://github.com/7R35C0/ztracy) library.
 
 Tested only with zig version 0.12.0 on Linux Fedora 39.
 
@@ -8,19 +8,16 @@ Tested only with zig version 0.12.0 on Linux Fedora 39.
 
 The original implementation is here: [zig-gamedev/libs/ztracy](https://github.com/zig-gamedev/zig-gamedev/tree/main/libs/ztracy)
 
-What I did was to create a standalone package and a release, for easier import
-into another `build.zig.zon` file.
-
 The original code for the example itself is here: [example](https://gitlab.com/zig_tracing/trace.zig/-/blob/main/examples/default_tracing_usage/src/main.zig?ref_type=heads)
 
 ### 📌 Important
 
-🔔 The standalone package has two releases (branches):
+🔔 The library has two repos (releases):
 
-* [ztracy-0.11.0](https://github.com/7R35C0/ztracy/releases/tag/ztracy-0.11.0) (main)
-* [ztracy-tsc-0.11.0](https://github.com/7R35C0/ztracy/releases/tag/ztracy-tsc-0.11.0) (hotfix-tsc)
+* [ztracy](https://github.com/7R35C0/ztracy) ( [ztracy-0.11.0](https://github.com/7R35C0/ztracy/releases/tag/ztracy-0.11.0) )
+* [ztracy-tsc](https://github.com/7R35C0/ztracy-tsc) ( [ztracy-tsc-0.11.0](https://github.com/7R35C0/ztracy-tsc/releases/tag/ztracy-tsc-0.11.0) )
 
-The first release, it is recommended for use.
+The recommended release to use is the first one.
 
 However, if you get an error like:
 
@@ -33,10 +30,6 @@ Alternatively you may rebuild the application with the TRACY_TIMER_FALLBACK defi
 ```
 
 try to use the second release.
-
-Since this issue is specific to certain computers (like mine, which is older),
-the `hotfix-tsc` branch will never be merged into the `main` branch and has a
-separate release.
 
 ### 📌 Useful Links
 
