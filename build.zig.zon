@@ -4,32 +4,31 @@
     //.minimum_zig_version = "0.12.0",
 
     .dependencies = .{
-        // Main release for `ztracy` (branch `main`)
+        // The recommended release to use is the first one.
         //
-        // Use this as default dependency and in case of error message:
+        // However, if you get an error like:
         //
         // ```txt
         // $ zig build run
         // Tracy Profiler initialization failure: CPU doesn't support invariant TSC.
-        // Define TRACY_NO_INVARIANT_CHECK=1 to ignore this error, *if you know what
-        // you are doing*.
-        // Alternatively you may rebuild the application with the TRACY_TIMER_FALLBACK
-        // define to use lower resolution timer.
+        // Define TRACY_NO_INVARIANT_CHECK=1 to ignore this error, *if you know what you are doing*.
+        // Alternatively you may rebuild the application with the TRACY_TIMER_FALLBACK define to use lower resolution timer.
         // ...
         // ```
         //
-        // comment this out and uncomment next `.ztracy` dependency
+        // try to use the second release (comment this out and uncomment next `.ztracy`)
+        //
         .ztracy = .{
             .url = "https://github.com/7R35C0/ztracy/releases/download/ztracy-0.11.0/ztracy-0.11.0.tar.gz",
-            .hash = "1220bfd695813c0ea8c5ac6312d3dce3e63686820517e653f15e984808c98c82a270",
+            .hash = "1220d02ebfd349a43c7ddf450bc0f548339b502aa4d77dc37e8bf5d6fc8f1b7f871e",
             //    .path = "foo",
             //    .lazy = false,
         },
 
-        // Hotfix release for `ztracy` (branch `hotfix-tsc`)
+        // // Fix release for `CPU doesn't support invariant TSC` message.
         // .ztracy = .{
-        //     .url = "https://github.com/7R35C0/ztracy/releases/download/ztracy-tsc-0.11.0/ztracy-tsc-0.11.0.tar.gz",
-        //     .hash = "1220a67ef73feb1d3004822ee9810fa0d3cd1e1b12a8cd9700ab39d71ee99add0d29",
+        //     .url = "https://github.com/7R35C0/ztracy-tsc/releases/download/ztracy-tsc-0.11.0/ztracy-tsc-0.11.0.tar.gz",
+        //     .hash = "1220a140f6693a218f9f0ec0542ea56f92d0f42266cec6c2469a4c29e887defb0b86",
         //     //    .path = "foo",
         //     //    .lazy = false,
         // },
